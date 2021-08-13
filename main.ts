@@ -22,7 +22,5 @@ basic.clearScreen()
 TYPED = ""
 radio.setGroup(69)
 basic.forever(function () {
-    if (!("" == TYPED)) {
-        basic.showString("" + TYPED + "|")
-    }
+    basic.showString("" + TYPED + "|")
 })
