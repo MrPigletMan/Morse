@@ -172,6 +172,7 @@ input.onGesture(Gesture.Shake, function () {
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     radio.sendString(TEXT)
+    TEXT = ""
 })
 let TEXT = ""
 let TYPED = ""
