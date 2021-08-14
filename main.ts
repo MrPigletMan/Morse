@@ -158,7 +158,10 @@ input.onButtonPressed(Button.AB, function () {
     CheckLetter()
 })
 radio.onReceivedString(function (receivedString) {
-    basic.showString("[" + receivedString + "]")
+    SHOW_MESSAGE = 1
+    basic.clearScreen()
+    basic.showString(receivedString)
+    SHOW_MESSAGE = 0
 })
 input.onButtonPressed(Button.B, function () {
     TYPED = "" + TYPED + "_"
@@ -172,6 +175,8 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 })
 let TEXT = ""
 let TYPED = ""
+let SHOW_MESSAGE = 0
+SHOW_MESSAGE = 0
 let Output = ""
 let Indicator = "|"
 basic.clearScreen()
@@ -179,7 +184,9 @@ TYPED = ""
 TEXT = ""
 radio.setGroup(69)
 basic.forever(function () {
-    basic.showString("" + TYPED + Indicator)
+    if (SHOW_MESSAGE == 0) {
+        basic.showString("" + TYPED + Indicator)
+    }
 })
 basic.forever(function () {
     Indicator = "|"
