@@ -1,5 +1,5 @@
 {
-    "name": "Morse",
+    "name": "Morse Code",
     "description": "",
     "dependencies": {
         "core": "*",
