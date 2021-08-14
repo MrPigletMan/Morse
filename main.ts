@@ -32,10 +32,7 @@ function CheckLetter () {
     } else if (TYPED == "..") {
         TEXT = "" + TEXT + "i"
         TYPED = ""
-    } else {
-    	
-    }
-    if (TYPED == ".___") {
+    } else if (TYPED == ".___") {
         TEXT = "" + TEXT + "j"
         TYPED = ""
     } else if (TYPED == "_._") {
@@ -65,10 +62,7 @@ function CheckLetter () {
     } else if (TYPED == "...") {
         TEXT = "" + TEXT + "s"
         TYPED = ""
-    } else {
-    	
-    }
-    if (TYPED == "_") {
+    } else if (TYPED == "_") {
         TEXT = "" + TEXT + "t"
         TYPED = ""
     } else if (TYPED == ".._") {
@@ -98,10 +92,7 @@ function CheckLetter () {
     } else if (TYPED == "...__") {
         TEXT = "" + TEXT + "3"
         TYPED = ""
-    } else {
-    	
-    }
-    if (TYPED == "...._") {
+    } else if (TYPED == "...._") {
         TEXT = "" + TEXT + "4"
         TYPED = ""
     } else if (TYPED == ".....") {
@@ -131,10 +122,7 @@ function CheckLetter () {
     } else if (TYPED == "._._._") {
         TEXT = "" + TEXT + "."
         TYPED = ""
-    } else {
-    	
-    }
-    if (TYPED == "__..__") {
+    } else if (TYPED == "__..__") {
         TEXT = "" + TEXT + ","
         TYPED = ""
     } else if (TYPED == "_._._.") {
@@ -159,7 +147,7 @@ function CheckLetter () {
         TEXT = "" + TEXT + " "
         TYPED = ""
     } else {
-    	
+        TYPED = ""
     }
 }
 input.onGesture(Gesture.ScreenDown, function () {
@@ -170,7 +158,7 @@ input.onButtonPressed(Button.AB, function () {
     CheckLetter()
 })
 radio.onReceivedString(function (receivedString) {
-    basic.showString(receivedString)
+    basic.showString("[" + receivedString + "]")
 })
 input.onButtonPressed(Button.B, function () {
     TYPED = "" + TYPED + "_"
