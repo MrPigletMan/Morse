@@ -152,7 +152,7 @@ function CheckLetter () {
 }
 input.onGesture(Gesture.ScreenDown, function () {
     basic.clearScreen()
-    TEXT = ""
+    TYPED = ""
 })
 input.onButtonPressed(Button.AB, function () {
     CheckLetter()
@@ -168,11 +168,10 @@ input.onButtonPressed(Button.B, function () {
 })
 input.onGesture(Gesture.Shake, function () {
     basic.clearScreen()
-    TYPED = ""
+    TEXT = ""
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     radio.sendString(TEXT)
-    TEXT = ""
 })
 let TEXT = ""
 let TYPED = ""
